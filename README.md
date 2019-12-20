@@ -2,6 +2,9 @@
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.txt)
+[![Build Status][ico-travis]][link-travis]
+[![Coverage Status][ico-scrutinizer]][link-scrutinizer]
+[![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
 This Laravel package provides support for enabling CORS requests in a Laravel application. If basic CORS support is needed, there are two other popular packages that are widely used ([barryvdh/laravel-cors](https://github.com/barryvdh/laravel-cors) and [spatie/laravel-cors](https://github.com/spatie/laravel-cors)).
@@ -147,9 +150,15 @@ The MIT License (MIT). Please see [License File](LICENSE.txt) for more informati
 
 [ico-version]: https://img.shields.io/packagist/v/shiftonelabs/laravel-cors.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/shiftonelabs/laravel-cors/master.svg?style=flat-square
+[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/shiftonelabs/laravel-cors.svg?style=flat-square
+[ico-code-quality]: https://img.shields.io/scrutinizer/g/shiftonelabs/laravel-cors.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/shiftonelabs/laravel-cors.svg?style=flat-square
 
 [link-packagist]: https://packagist.org/packages/shiftonelabs/laravel-cors
+[link-travis]: https://travis-ci.org/shiftonelabs/laravel-cors
+[link-scrutinizer]: https://scrutinizer-ci.com/g/shiftonelabs/laravel-cors/code-structure
+[link-code-quality]: https://scrutinizer-ci.com/g/shiftonelabs/laravel-cors
 [link-downloads]: https://packagist.org/packages/shiftonelabs/laravel-cors
 [link-author]: https://github.com/patrickcarlohickman
 [link-contributors]: ../../contributors
