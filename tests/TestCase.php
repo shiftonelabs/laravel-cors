@@ -15,7 +15,7 @@ class TestCase extends BaseTestCase
 
     public function createApplication()
     {
-        $app = new Application();
+        $app = new Application(dirname(__DIR__));
         $app->singleton(\Illuminate\Contracts\Http\Kernel::class, \Illuminate\Foundation\Http\Kernel::class);
         $app->singleton(\Illuminate\Contracts\Console\Kernel::class, \Illuminate\Foundation\Console\Kernel::class);
 
