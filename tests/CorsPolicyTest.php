@@ -4,10 +4,10 @@ namespace ShiftOneLabs\LaravelCors\Tests;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use PHPUnit\Framework\TestCase;
+use PHPUnit_Framework_TestCase;
 use ShiftOneLabs\LaravelCors\CorsPolicy;
 
-class CorsPolicyTest extends TestCase
+class CorsPolicyTest extends PHPUnit_Framework_TestCase
 {
     public function test_it_determines_if_a_request_is_allowed()
     {

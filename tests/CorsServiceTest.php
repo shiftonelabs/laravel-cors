@@ -2,12 +2,12 @@
 
 namespace ShiftOneLabs\LaravelCors\Tests;
 
-use PHPUnit\Framework\TestCase;
+use PHPUnit_Framework_TestCase;
 use ShiftOneLabs\LaravelCors\CorsService;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class CorsServiceTest extends TestCase
+class CorsServiceTest extends PHPUnit_Framework_TestCase
 {
     use ReflectionTrait;
 
