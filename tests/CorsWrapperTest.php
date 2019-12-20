@@ -15,6 +15,11 @@ class CorsWrapperTest extends TestCase
 
         $response = $this->get('integration-test');
 
+        // Laravel 5.4 changed the response from $this to a TestResponse object.
+        if ($response === $this) {
+            $response = $this->response;
+        }
+
         $this->assertEquals(200, $response->getStatusCode());
     }
 }

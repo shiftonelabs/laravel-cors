@@ -14,6 +14,8 @@ class TestCase extends BaseTestCase
 {
     use ReflectionTrait;
 
+    protected $baseUrl = 'http://localhost';
+
     public function createApplication()
     {
         $app = new Application(dirname(__DIR__));
