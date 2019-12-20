@@ -178,7 +178,7 @@ class CorsWrapper
 
         // Gather all the route CORS policy middlewares.
         foreach ($this->router->gatherRouteMiddleware($route) as $routeMiddleware) {
-            [$class, $parameters] = array_pad(explode(':', $routeMiddleware, 2), 2, '');
+            list($class, $parameters) = array_pad(explode(':', $routeMiddleware, 2), 2, '');
             if ($class == ApplyCorsPolicy::class) {
                 $corsMiddleware[] = $routeMiddleware;
             }
