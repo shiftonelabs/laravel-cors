@@ -13,7 +13,6 @@ php:
   - 7.4
 
 env:
-  - ILLUMINATE_VERSION=5.0.*
   - ILLUMINATE_VERSION=5.1.*
   - ILLUMINATE_VERSION=5.2.*
   - ILLUMINATE_VERSION=5.3.*
@@ -26,9 +25,6 @@ env:
 
 jobs:
   include:
-    - dist: trusty
-      php: 5.5
-      env: ILLUMINATE_VERSION=5.0.*
     - dist: trusty
       php: 5.5
       env: ILLUMINATE_VERSION=5.1.*

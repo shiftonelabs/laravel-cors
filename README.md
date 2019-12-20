@@ -31,7 +31,7 @@ This package works to ensure the CORS configuration is applied to the request, e
 
 ## Versions
 
-This package is meant for Laravel 5.0 through Laravel 6.x. It does not yet support Lumen. This package uses middleware, and therefore does not support Laravel < 5.0.
+This package is meant for Laravel 5.1 through Laravel 6.x. It does not yet support Lumen. This package uses middleware, and therefore does not support Laravel < 5.0. This package requires the `Kernel::hasMiddleware()` method, and therefore does not support Laravel 5.0.
 
 ## Install
 
@@ -47,7 +47,7 @@ Once composer has been updated and the package has been installed, the service p
 
 This package uses auto package discovery. The service provider will automatically be registered.
 
-#### Laravel 5.0 - 5.4
+#### Laravel 5.1 - 5.4
 
 Open `config/app.php` and add following line to the providers array:
 
