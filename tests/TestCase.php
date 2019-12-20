@@ -4,6 +4,7 @@ namespace ShiftOneLabs\LaravelCors\Tests;
 
 use Illuminate\Config\Repository;
 use Illuminate\Foundation\Application;
+use Illuminate\Support\Facades\Facade;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 
 /**
@@ -16,11 +17,15 @@ class TestCase extends BaseTestCase
     public function createApplication()
     {
         $app = new Application(dirname(__DIR__));
-        $app->singleton(\Illuminate\Contracts\Http\Kernel::class, \Illuminate\Foundation\Http\Kernel::class);
+        $app->singleton(\Illuminate\Contracts\Http\Kernel::class, \ShiftOneLabs\LaravelCors\Tests\Fakes\Kernel::class);
         $app->singleton(\Illuminate\Contracts\Console\Kernel::class, \Illuminate\Foundation\Console\Kernel::class);
+        $app->singleton(\Illuminate\Contracts\Debug\ExceptionHandler::class, \ShiftOneLabs\LaravelCors\Tests\Fakes\DebugExceptionHandler::class);
 
         // bootstrap: register config
         $app->instance('config', $config = new Repository([]));
+
+        // bootstrap: register facades
+        Facade::setFacadeApplication($app);
 
         // bootstrap: register providers
         $app->register(\ShiftOneLabs\LaravelCors\LaravelCorsServiceProvider::class);
