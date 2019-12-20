@@ -26,8 +26,7 @@ class ServiceProviderTest extends TestCase
 
     public function test_service_provider_publishes_config()
     {
-        $this->assertContains(LaravelCorsServiceProvider::class, ServiceProvider::publishableProviders());
-        $this->assertContains('config', ServiceProvider::publishableGroups());
+        $this->assertNotEmpty(ServiceProvider::pathsToPublish(LaravelCorsServiceProvider::class, 'config'));
     }
 
     public function test_service_provider_prepends_middleware()
