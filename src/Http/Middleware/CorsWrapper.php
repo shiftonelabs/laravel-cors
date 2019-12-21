@@ -83,17 +83,17 @@ class CorsWrapper
         // Ensure we are working with a Response object.
         $response = Router::toResponse($request, $response);
 
-        // If the response is not an error, there were no exceptions to
-        // get in the way of all the middleware getting processed.
-        if ($response->getStatusCode() < 400 && empty($response->exception)) {
-            return $response;
-        }
-
         // Skip if the CORS middleware has already processed the request. If
         // the request is forbidden or has a bad method/header, the normal
         // CORS headers aren't added, so we check for a custom one.
         if ($response->headers->has('X-S1L-CORS-HANDLED')) {
             return $this->prepareResponse($response);
+        }
+
+        // If the response is not an error, there were no exceptions to
+        // get in the way of all the middleware getting processed.
+        if ($response->getStatusCode() < 400 && empty($response->exception)) {
+            return $response;
         }
 
         $route = $request->route();
